@@ -106,9 +106,9 @@ There are two main sequential learning approaches to deal with sequential depend
 In addition, the **Attention module** takes in input all the hidden states of the sequential model and combines them in a relevant manner with respect to a certain context. More precisely, given a context vector $c$ and the sequence of hidden states $h_i$, the Attention module computes an attention score $a_i$ for each hidden state, generally using a similarity measure like a dot product between $c$ and $h_i$. Then, these scores are normalized with softmax and used to compute a global output state with a linear combination $\sum a_i * h_i$. 
 
 <p align="center">
-    <img src="https://github.com/Fraud-Detection-Handbook/fraud-detection-handbook/blob/main/Chapter_7_DeepLearning/images/attention.png" width="70%">
+    <img src="https://github.com/Fraud-Detection-Handbook/fraud-detection-handbook/blob/main/Chapter_7_DeepLearning/images/attention.png" width="60%">
 </p>
-<p>
+<p align="center">
     <em>Source: https://github.com/Fraud-Detection-Handbook/fraud-detection-handbook/blob/main/Chapter_7_DeepLearning/images/attention.png</em>
 </p>
 
