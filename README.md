@@ -60,7 +60,8 @@ Various imbalanced learning strategies have been combined with the XGBoost model
 * Random undersampling and Edited Nearest Neighbors undersampling consist in reducing the imbalance ratio by removing samples from the majority class (well-suited for large datasets);
 * Hybrid resampling combines oversampling the minority class and undersampling the majority class.
 
-<\br>
+&nbsp;
+&nbsp;
 
 <img align="right" width="50%" src="https://github.com/silviapoletti/fraud-detection/blob/7e395e617991b1f431f4dfb4984438e7d4caeffb/visualizations/imbalanced_learning_parallel_ensemble.png">
 
