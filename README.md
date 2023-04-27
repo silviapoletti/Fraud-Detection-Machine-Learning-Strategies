@@ -36,8 +36,8 @@ The TPR for low FPR values is what matters most in a fraud detection problem, si
 The following graphs focus only on the best ML classifier, namely XGBoost.
 
 <p align="center">
-  <img src="https://github.com/silviapoletti/fraud-detection/blob/7a6e48f7ba70bdb81276c7284f2e1c7a077d4e28/visualizations/topk_random.png" width="45%">
-  <img src="https://github.com/silviapoletti/fraud-detection/blob/7a6e48f7ba70bdb81276c7284f2e1c7a077d4e28/visualizations/topk_xgboost.png" width="45%">
+  <img src="https://github.com/silviapoletti/fraud-detection/blob/3743935d9933267ee764808e749942d61a37254c/visualizations/topk_random.png" height="45%">
+  <img src="https://github.com/silviapoletti/fraud-detection/blob/7a6e48f7ba70bdb81276c7284f2e1c7a077d4e28/visualizations/topk_xgboost.png" height="45%">
 </p>
 
 According to XGBoost, the features that influence more the fraud event are:
