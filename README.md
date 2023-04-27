@@ -1,5 +1,9 @@
 # Credit Card Fraud Detection
 
+<a target="_blank" href="https://colab.research.google.com/github/silviapoletti/fraud-detection/blob/89f122f995921d19cda13a9bdb4fb63811814859/Fraud_detection_notebook.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
+
 <img align="right" width="20%" src="https://prop.idcheck.tech/assets/img/fraud-detection.png">
 
 This repository aims to summarize the most convinient Machine Learning and Deep Learning approaches to carry out fraud detection. The code is based on and highlights the main takeaways of the [Fraud Detection Handbook](https://fraud-detection-handbook.github.io/fraud-detection-handbook/Foreword.html) by Le Borgne et al.
