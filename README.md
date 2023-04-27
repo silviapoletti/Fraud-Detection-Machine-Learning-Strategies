@@ -64,8 +64,8 @@ Moreover, some parallel-based ensemble methods like Balanced Bagging and Balance
 Ensemble methods consist in training multiple prediction models (called baseline learners) for the same prediction task, and in combining their outputs to make the final prediction. In parallel-based ensemble methods each baseline learner is trained in parallel, using either a subset of the training data, a subset of the training features, or a combination of both. On the contrary, in iterative-based ensemble methods such as XGBoost the baseline classifiers are trained in sequence.
 
 <p align="center">
-  <img src="https://github.com/silviapoletti/fraud-detection/blob/3743935d9933267ee764808e749942d61a37254c/visualizations/topk_random.png" height=150>
-  <img src="https://github.com/silviapoletti/fraud-detection/blob/7a6e48f7ba70bdb81276c7284f2e1c7a077d4e28/visualizations/topk_xgboost.png" height=150>
+  <img src="https://github.com/silviapoletti/fraud-detection/blob/e45d68547de6c0c2663ad9b0883d7e33b4d46894/visualizations/balanced_bagging.png" height=150>
+  <img src="https://github.com/silviapoletti/fraud-detection/blob/e45d68547de6c0c2663ad9b0883d7e33b4d46894/visualizations/balanced_rf.png" height=150>
 </p>
 
 
