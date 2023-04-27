@@ -28,8 +28,7 @@ The ML binary classifiers under consideration are: K-Nearest Neighbors (K-NN), L
 After model selection with grid search to identify the optimal hyper-parameters, the models have been interpreted and analyzed considering the execution time, the confusion matrix and threshold-based metrics, the threshold-free metrics and the precision top-k metrics.
 
 <p align="center">
-  <img src="https://github.com/silviapoletti/fraud-detection/blob/1c51818f19a1f20c44a626ac55f33c0ccb06a212/visualizations/feat_importance_xgboost.png" width="45%">
-  <img src="https://github.com/silviapoletti/fraud-detection/blob/1c51818f19a1f20c44a626ac55f33c0ccb06a212/visualizations/shap_xgboost.png" width="45%">
+  <img src="https://github.com/silviapoletti/fraud-detection/blob/3ff7d7657366f7e74883797b6b5b50c8025ff3cb/visualizations/feat_importance_xgboost.png" width="80%">
 </p>
 
 According to XGBoost, the features that influence more the fraud event are:
