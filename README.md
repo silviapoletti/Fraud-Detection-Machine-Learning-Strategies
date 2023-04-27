@@ -28,7 +28,13 @@ The ML binary classifiers under consideration are: K-Nearest Neighbors (K-NN), L
 After model selection with grid search to identify the optimal hyper-parameters, the models have been interpreted and analyzed considering the execution time, the confusion matrix and threshold-based metrics, the threshold-free metrics and the precision top-k metrics.
 
 <p align="center">
-  <img src="https://github.com/silviapoletti/Spain-energy-supply-and-price-profile/blob/7e5e92a79fc8c5c1ed2d3885c7d48c9fdcd1ed87/slides%20and%20plots/aggregation-autocorrelation.png" width="100%">
+  <img src="https://github.com/silviapoletti/fraud-detection/blob/1c51818f19a1f20c44a626ac55f33c0ccb06a212/visualizations/feat_importance_xgboost.png" width="45%">
+  <img src="https://github.com/silviapoletti/fraud-detection/blob/1c51818f19a1f20c44a626ac55f33c0ccb06a212/visualizations/shap_xgboost.png" width="45%">
 </p>
 
+According to XGBoost, the features that influence more the fraud event are:
+* low value of the average amount of money spent by the costumer in the 30 days window, but high values for the corresponding features in the 1 and 7 days windows;
+* high transiction amount;
+* high number of customer's transactions in the 30 days window, but low number for the corresponding feature in the 7 days windows;
+* low number of transactions in a terminal in the 30 days window, but high terminal risk in the 7 days windows.
 
