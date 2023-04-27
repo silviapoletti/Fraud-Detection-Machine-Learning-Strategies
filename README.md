@@ -85,13 +85,13 @@ The following graphs show how the performance metric changes according to the NN
 
 Fraud detection can be formalized as as an unsupervised anomaly detection or outlier detection taks, aiming to identify items that are rare or differ significantly from the "normal" behavior, observable in the majority of the data. 
 
-<img align="right" width="50%" src="https://github.com/silviapoletti/fraud-detection/blob/7e395e617991b1f431f4dfb4984438e7d4caeffb/visualizations/imbalanced_learning_parallel_ensemble.png">
+<img align="right" width="50%" src="https://github.com/silviapoletti/fraud-detection/blob/86770fa8588fd0b2fedfdd74ebc968f4d0cc6c5e/visualizations/autoencoder.png">
 
 An autoencoder can therefore be used to model the normal behavior of data and detect outliers using the reconstruction error as an indicator. Indeed, the reconstruction error of "normal" data will be lower than the reconstruction error of outliers.
 
 For comparison, Isolation Forest has been implemented as an alternative unsupervised anomaly detector that relies on tree-based models.
 
-Finally, the autoencoder can be used in a semi-supervised learning setting in which a feed-forward NN trained on labeled data is provided with the unsupervised risk score computed by the autoencoder (reconstruction error) as an additional variable to the supervised model.
+Finally, the autoencoder can be used in a semi-supervised learning setting in which a feed-forward NN trained on labeled data is provided with the unsupervised risk score computed by the autoencoder (reconstruction error) as an additional variable to the supervised model. The three metrics for our data are very close, with or without the additional feature. Nevertheless, with a different setting there can be a benefit, especially if the quantity of available unlabeled data is much larger than the quantity of labeled data. Moreover, this semi-supervised technique can be improved by training two separate autoencoders, one for each class, and by using both reconstruction errors as additional variables.
 
 # Sequential models
 
