@@ -52,7 +52,7 @@ According to XGBoost, the features that better identify the fraud event are:
 
 #  Imbalanced learning strategies
 
-<img align="right" width="40%" src="https://github.com/silviapoletti/fraud-detection/blob/7de14175a7f4dcb891903fe5c29fc282f100011d/visualizations/imbalanced_learning.png">
+<img align="right" width="50%" src="https://github.com/silviapoletti/fraud-detection/blob/7de14175a7f4dcb891903fe5c29fc282f100011d/visualizations/imbalanced_learning.png">
 
 Various imbalanced learning strategies have been combined with the XGBoost model:
 * Balanced XGBoost is a cost-sensitive learning algorithm in which the misclassification costs is a hyperparameter to be identified through model selection;
