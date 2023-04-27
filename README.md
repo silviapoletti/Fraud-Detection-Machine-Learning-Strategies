@@ -70,16 +70,28 @@ Ensemble methods consist in training multiple prediction models (called baseline
 In parallel-based ensemble methods each baseline learner is trained in parallel, using either a subset of the training data, a subset of the training features, or a combination of both. 
 On the contrary, in iterative-based ensemble methods such as XGBoost the baseline classifiers are trained in sequence.
 
-# Feed-forward Neural Networks
+# Feed-forward neural networks classifiers
 
 A feed-forward NN with one hidden layer and Dropout has been compared to a similar architecture using embedding layers, which consider extra categorical inputs, namely the raw terminal id and the day of the week. Indeed, embedding layers learn a representation of each modality of the categorical variable in a continuous vector space of dimension $k$, chosen by the user. Note that learning an embedding of dimension $k$ for a categorical feature is computationally equivalent to learning a classical fully connected layer that takes as input the one-hot encoding of the feature and outputs $k$ neurons.
 
+The following graphs show how the performance metric changes according to the NN hyper-parameter values (for each parameter under consideration, the other parameters are fixed to epochs=20, batch_size=64, dropout=0.2).
 <p align="center">
-  <img src="https://github.com/silviapoletti/fraud-detection/blob/e45d68547de6c0c2663ad9b0883d7e33b4d46894/visualizations/balanced_bagging.png" width="80%">
-  <img src="https://github.com/silviapoletti/fraud-detection/blob/e45d68547de6c0c2663ad9b0883d7e33b4d46894/visualizations/balanced_rf.png" width="80%">
+  <img src="https://github.com/silviapoletti/fraud-detection/blob/2ed92729a56c09a2c28edb7a15bf00e51eecfa6c/visualizations/NN_epochs.png" width="80%">
+  <img src="https://github.com/silviapoletti/fraud-detection/blob/2ed92729a56c09a2c28edb7a15bf00e51eecfa6c/visualizations/NN_batches.png" width="80%">
+  <img src="https://github.com/silviapoletti/fraud-detection/blob/2ed92729a56c09a2c28edb7a15bf00e51eecfa6c/visualizations/NN_dropout.png" width="80%">
 </p>
 
-# Autoencoders
+# Autoencoders for anomaly detection
+
+Fraud detection can be formalized as as an unsupervised anomaly detection or outlier detection taks, aiming to identify items that are rare or differ significantly from the "normal" behavior, observable in the majority of the data. 
+
+<img align="right" width="50%" src="https://github.com/silviapoletti/fraud-detection/blob/7e395e617991b1f431f4dfb4984438e7d4caeffb/visualizations/imbalanced_learning_parallel_ensemble.png">
+
+An autoencoder can therefore be used to model the normal behavior of data and detect outliers using the reconstruction error as an indicator. Indeed, the reconstruction error of "normal" data will be lower than the reconstruction error of outliers.
+
+For comparison, Isolation Forest has been implemented as an alternative unsupervised anomaly detector that relies on tree-based models.
+
+Finally, the autoencoder can be used in a semi-supervised learning setting in which a feed-forward NN trained on labeled data is provided with the unsupervised risk score computed by the autoencoder (reconstruction error) as an additional variable to the supervised model.
 
 # Sequential models
 
