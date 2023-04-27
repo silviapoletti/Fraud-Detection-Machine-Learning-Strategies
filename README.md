@@ -63,16 +63,14 @@ Various imbalanced learning strategies have been combined with the XGBoost model
 Moreover, some parallel-based ensemble methods like Balanced Bagging and Balanced Random Forest have been tested for comparison.
 Ensemble methods consist in training multiple prediction models (called baseline learners) for the same prediction task, and in combining their outputs to make the final prediction. In parallel-based ensemble methods each baseline learner is trained in parallel, using either a subset of the training data, a subset of the training features, or a combination of both. On the contrary, in iterative-based ensemble methods such as XGBoost the baseline classifiers are trained in sequence.
 
-<p align="center">
-  <img src="https://github.com/silviapoletti/fraud-detection/blob/e45d68547de6c0c2663ad9b0883d7e33b4d46894/visualizations/balanced_bagging.png" width="80%">
-  <img src="https://github.com/silviapoletti/fraud-detection/blob/e45d68547de6c0c2663ad9b0883d7e33b4d46894/visualizations/balanced_rf.png" width="80%">
-</p>
-
 # Feed-forward Neural Networks
 
 A feed-forward NN with one hidden layer and Dropout has been compared to a similar architecture using embedding layers, which consider extra categorical inputs, namely the raw terminal id and the day of the week. Indeed, embedding layers learn a representation of each modality of the categorical variable in a continuous vector space of dimension $k$, chosen by the user. Note that learning an embedding of dimension $k$ for a categorical feature is computationally equivalent to learning a classical fully connected layer that takes as input the one-hot encoding of the feature and outputs $k$ neurons.
 
-
+<p align="center">
+  <img src="https://github.com/silviapoletti/fraud-detection/blob/e45d68547de6c0c2663ad9b0883d7e33b4d46894/visualizations/balanced_bagging.png" width="80%">
+  <img src="https://github.com/silviapoletti/fraud-detection/blob/e45d68547de6c0c2663ad9b0883d7e33b4d46894/visualizations/balanced_rf.png" width="80%">
+</p>
 
 # Autoencoders
 
