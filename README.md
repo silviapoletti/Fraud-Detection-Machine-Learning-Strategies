@@ -116,7 +116,7 @@ In fraud detection, a reasonable choice is to consider a representation of the t
 
 
 <p align="center">
-    <img src="https://github.com/silviapoletti/fraud-detection/blob/d10b60a6a57ccb8899a3370a660a3c61da28ba04/visualizations/sequential_performance.png" width="30%">
+    <img src="https://github.com/silviapoletti/fraud-detection/blob/d10b60a6a57ccb8899a3370a660a3c61da28ba04/visualizations/sequential_performance.png" width="40%">
 </p>
 
 
