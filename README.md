@@ -40,7 +40,7 @@ The following graphs focus only on the best ML classifier, namely XGBoost.
   <img src="https://github.com/silviapoletti/fraud-detection/blob/7a6e48f7ba70bdb81276c7284f2e1c7a077d4e28/visualizations/topk_xgboost.png" height=150>
 </p>
 
-According to XGBoost, the features that influence more the fraud event are:
+According to XGBoost, the features that better identify the fraud event are:
 * low value of the average amount of money spent by the costumer in the 30 days window, but high values for the corresponding features in the 1 and 7 days windows;
 * high transiction amount;
 * high number of customer's transactions in the 30 days window, but low number for the corresponding feature in the 7 days windows;
