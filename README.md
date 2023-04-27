@@ -60,9 +60,11 @@ Various imbalanced learning strategies have been combined with the XGBoost model
 * Random undersampling and Edited Nearest Neighbors undersampling consist in reducing the imbalance ratio by removing samples from the majority class (well-suited for large datasets);
 * Hybrid resampling combines oversampling the minority class and undersampling the majority class.
 
-Moreover, some parallel-based ensemble methods like Balanced Bagging and Balanced Random Forest have been tested for comparison.
+<\br>
 
 <img align="right" width="50%" src="https://github.com/silviapoletti/fraud-detection/blob/7e395e617991b1f431f4dfb4984438e7d4caeffb/visualizations/imbalanced_learning_parallel_ensemble.png">
+
+Moreover, some parallel-based ensemble methods like Balanced Bagging and Balanced Random Forest have been tested for comparison.
 
 Ensemble methods consist in training multiple prediction models (called baseline learners) for the same prediction task, and in combining their outputs to make the final prediction. 
 In parallel-based ensemble methods each baseline learner is trained in parallel, using either a subset of the training data, a subset of the training features, or a combination of both. 
