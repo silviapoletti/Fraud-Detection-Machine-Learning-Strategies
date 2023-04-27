@@ -108,7 +108,7 @@ In addition, the **Attention module** takes in input all the hidden states of th
 <p align="center">
     <img src="https://github.com/Fraud-Detection-Handbook/fraud-detection-handbook/blob/main/Chapter_7_DeepLearning/images/attention.png" width="70%">
 </p>
-<p align="center">
+<p>
     <em>Source: https://github.com/Fraud-Detection-Handbook/fraud-detection-handbook/blob/main/Chapter_7_DeepLearning/images/attention.png</em>
 </p>
 
