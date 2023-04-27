@@ -28,6 +28,15 @@ The ML binary classifiers under consideration are: K-Nearest Neighbors (K-NN), L
 After model selection with grid search to identify the optimal hyper-parameters, the models have been interpreted and analyzed considering the execution time, the confusion matrix and threshold-based metrics, the threshold-free metrics and the precision top-k metrics.
 
 <p align="center">
+  <img src="https://github.com/silviapoletti/fraud-detection/blob/ad90b3bc3728b78af9a3fb02616751758e9afbc3/visualizations/execution_time.png" width="40%">
+</p>
+
+<p align="center">
+  <img src="https://github.com/silviapoletti/fraud-detection/blob/ad90b3bc3728b78af9a3fb02616751758e9afbc3/visualizations/roc_curve.png" width="45%">
+  <img src="https://github.com/silviapoletti/fraud-detection/blob/ad90b3bc3728b78af9a3fb02616751758e9afbc3/visualizations/pr_curve.png" width="45%">
+</p>
+
+<p align="center">
   <img src="https://github.com/silviapoletti/fraud-detection/blob/3ff7d7657366f7e74883797b6b5b50c8025ff3cb/visualizations/feat_importance_xgboost.png" width="80%">
 </p>
 
