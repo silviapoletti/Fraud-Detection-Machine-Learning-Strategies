@@ -115,7 +115,9 @@ In addition, the **Attention module** takes in input all the hidden states of th
 In fraud detection, a reasonable choice is to consider a representation of the transaction that we aim to classify (i.e. the last transaction) as context, in order to select the correct elements from the previous transactions. As representation, it's possible to use a projection of the last transaction.
 
 
-
+<p align="center">
+    <img src="https://github.com/silviapoletti/fraud-detection/blob/d10b60a6a57ccb8899a3370a660a3c61da28ba04/visualizations/sequential_performance.png" width="30%">
+</p>
 
 
 
