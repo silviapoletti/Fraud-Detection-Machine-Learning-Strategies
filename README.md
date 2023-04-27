@@ -25,11 +25,7 @@ The simulated fraud scenarios are as follows:
 # Machine Learning binary classifiers
 
 The ML binary classifiers under consideration are: K-Nearest Neighbors (K-NN), Logistic Regression (LR), Decision Tree (DT), Random Forest (RF) and XGBoosting.
-After model selection with grid search to identify the optimal hyper-parameters, the models have been interpreted and analyzed considering the following:
-* the execution time;
-* the confusion matrix and threshold-based metrics;
-* the threshold-free metrics;  
-* the precision top-k metrics.
+After model selection with grid search to identify the optimal hyper-parameters, the models have been interpreted and analyzed considering the execution time, the confusion matrix and threshold-based metrics, the threshold-free metrics and the precision top-k metrics.
 
 <p align="center">
   <img src="https://github.com/silviapoletti/Spain-energy-supply-and-price-profile/blob/7e5e92a79fc8c5c1ed2d3885c7d48c9fdcd1ed87/slides%20and%20plots/aggregation-autocorrelation.png" width="100%">
