@@ -24,7 +24,7 @@ The simulated fraud scenarios are as follows:
 
 # Machine Learning binary classifiers
 
-The ML binary classifiers under consideration are: K-Nearest Neighbors (K-NN), Logistic Regression (LR), Decision Tree (DT), Random Forest (RF) and XGBoosting. All the models have been implemented using the Scikit-learn library.
+The ML binary classifiers under consideration are: **K-Nearest Neighbors** (K-NN), **Logistic Regression** (LR), **Decision Tree** (DT), **Random Forest** (RF) and **XGBoost**. All the models have been implemented using the Scikit-learn library.
 After model selection with grid search to identify the optimal hyper-parameters, the models have been interpreted and analyzed considering the execution time, the confusion matrix and threshold-based metrics, the threshold-free metrics and the precision top-k metrics.
 
 <p align="center">
@@ -55,16 +55,16 @@ According to XGBoost, the features that better identify the fraud event are:
 <img align="right" width="50%" src="https://github.com/silviapoletti/fraud-detection/blob/7de14175a7f4dcb891903fe5c29fc282f100011d/visualizations/imbalanced_learning.png">
 
 Various imbalanced learning strategies have been combined with the XGBoost model:
-* Balanced XGBoost is a cost-sensitive learning algorithm in which the misclassification costs is a hyperparameter to be identified through model selection;
-* SMOTE oversampling consists in artificially increasing the proportion of samples from the minority class;
-* Random undersampling and Edited Nearest Neighbors undersampling consist in reducing the imbalance ratio by removing samples from the majority class (well-suited for large datasets);
-* Hybrid resampling combines oversampling the minority class and undersampling the majority class.
+* **Balanced XGBoost** is a cost-sensitive learning algorithm in which the misclassification costs is a hyperparameter to be identified through model selection;
+* **SMOTE oversampling** consists in artificially increasing the proportion of samples from the minority class;
+* **Random undersampling** and **Edited Nearest Neighbors** undersampling consist in reducing the imbalance ratio by removing samples from the majority class (well-suited for large datasets);
+* **Hybrid resampling** combines oversampling the minority class and undersampling the majority class.
 
 &nbsp;
 
 <img align="right" width="50%" src="https://github.com/silviapoletti/fraud-detection/blob/7e395e617991b1f431f4dfb4984438e7d4caeffb/visualizations/imbalanced_learning_parallel_ensemble.png">
 
-Moreover, some parallel-based ensemble methods like Balanced Bagging and Balanced Random Forest have been tested for comparison.
+Moreover, some parallel-based ensemble methods like **Balanced Bagging** and **Balanced Random Forest** have been tested for comparison.
 
 Ensemble methods consist in training multiple prediction models (called baseline learners) for the same prediction task, and in combining their outputs to make the final prediction. 
 In parallel-based ensemble methods each baseline learner is trained in parallel, using either a subset of the training data, a subset of the training features, or a combination of both. 
@@ -72,7 +72,7 @@ On the contrary, in iterative-based ensemble methods such as XGBoost the baselin
 
 # Feed-forward neural networks classifiers
 
-A feed-forward NN with one hidden layer and Dropout has been compared to a similar architecture using embedding layers, which consider extra categorical inputs, namely the raw terminal id and the day of the week. Indeed, embedding layers learn a representation of each modality of the categorical variable in a continuous vector space of dimension $k$, chosen by the user. Note that learning an embedding of dimension $k$ for a categorical feature is computationally equivalent to learning a classical fully connected layer that takes as input the one-hot encoding of the feature and outputs $k$ neurons.
+A **feed-forward NN** with one hidden layer and Dropout has been compared to a similar architecture using **embedding layers**, which consider extra categorical inputs, namely the raw terminal id and the day of the week. Indeed, embedding layers learn a representation of each modality of the categorical variable in a continuous vector space of dimension $k$, chosen by the user. Note that learning an embedding of dimension $k$ for a categorical feature is computationally equivalent to learning a classical fully connected layer that takes as input the one-hot encoding of the feature and outputs $k$ neurons.
 
 The following graphs show how the performance metric changes according to the NN hyper-parameter values (for each parameter under consideration, the other parameters are fixed to epochs=20, batch_size=64, dropout=0.2).
 <p align="center">
@@ -81,18 +81,39 @@ The following graphs show how the performance metric changes according to the NN
   <img src="https://github.com/silviapoletti/fraud-detection/blob/2ed92729a56c09a2c28edb7a15bf00e51eecfa6c/visualizations/NN_dropout.png" width="80%">
 </p>
 
+All the deep learning models, including the ones in the following sections, have been implemented in PyTorch.
+
 # Autoencoders for anomaly detection
 
-Fraud detection can be formalized as as an unsupervised anomaly detection or outlier detection taks, aiming to identify items that are rare or differ significantly from the "normal" behavior, observable in the majority of the data. 
+Fraud detection can be formalized as as an **unsupervised learning** anomaly detection or outlier detection taks, aiming to identify items that are rare or differ significantly from the "normal" behavior, observable in the majority of the data. 
 
-<img align="right" width="50%" src="https://github.com/silviapoletti/fraud-detection/blob/86770fa8588fd0b2fedfdd74ebc968f4d0cc6c5e/visualizations/autoencoder.png">
+<img align="right" width="50%" src="https://github.com/silviapoletti/fraud-detection/blob/cd579d1da2a54dfbc2e96e330787e42486c9ce19/visualizations/autoencoder_performance.png">
 
-An autoencoder can therefore be used to model the normal behavior of data and detect outliers using the reconstruction error as an indicator. Indeed, the reconstruction error of "normal" data will be lower than the reconstruction error of outliers.
+An **Autoencoder** can therefore be used to model the normal behavior of data and detect outliers using the reconstruction error as an indicator. Indeed, the reconstruction error of "normal" data will be lower than the reconstruction error of outliers.
 
-For comparison, Isolation Forest has been implemented as an alternative unsupervised anomaly detector that relies on tree-based models.
+For comparison, **Isolation Forest** has been implemented as an alternative unsupervised anomaly detector that relies on tree-based models.
 
-Finally, the autoencoder can be used in a semi-supervised learning setting in which a feed-forward NN trained on labeled data is provided with the unsupervised risk score computed by the autoencoder (reconstruction error) as an additional variable to the supervised model. The three metrics for our data are very close, with or without the additional feature. Nevertheless, with a different setting there can be a benefit, especially if the quantity of available unlabeled data is much larger than the quantity of labeled data. Moreover, this semi-supervised technique can be improved by training two separate autoencoders, one for each class, and by using both reconstruction errors as additional variables.
+Finally, the autoencoder can be used in a **semi-supervised learning** setting in which a feed-forward NN trained on labeled data is provided with the unsupervised risk score computed by the autoencoder (reconstruction error) as an additional variable to the supervised model. The three metrics for our data are very close, with or without the additional feature. Nevertheless, with a different setting there can be a benefit, especially if the quantity of available unlabeled data is much larger than the quantity of labeled data. Moreover, this semi-supervised technique can be improved by training two separate autoencoders, one for each class, and by using both reconstruction errors as additional variables.
 
-# Sequential models
+# Sequential models for context-aware fraud detection
+
+Context-aware fraud detection is based on feature aggregation in order to consider the context (e.g. the cardholder history) associated with a transaction to make predictions. The context is established based on a landmark variable, which here can be the Customer ID. Concretely, one starts by building the sequence (usually of fixed-size) of historical transactions, chronologically ordered from the oldest to the current one, that have the same Customer ID as the current transaction.
+
+There are two main sequential learning approaches to deal with sequential dependency between data points:
+* Sliding window methods, which often tend to ignore the order between data points within the window (e.g. **1D convolutional neural networks**);
+* Sequential models that are designed explicitly to consider the sequential order between consecutive data points (e.g. recurrent neural networks such as **Long Short-Term Memory networks** which make use of several gates, i.e. neurons with sigmoid activations, to cleverly select the right information to keep from the previous state and the right information to integrate from the current input).
+
+In addition, the **Attention module** takes in input all the hidden states of the sequential model and combines them in a relevant manner with respect to a certain context. More precisely, given a context vector $c$ and the sequence of hidden states $h_i$, the Attention module computes an attention score $a_i$ for each hidden state, generally using a similarity measure like a dot product between $c$ and $h_i$. Then, these scores are normalized with softmax and used to compute a global output state with a linear combination $\sum a_i * h_i$. 
+
+| ![space-1.jpg](http://www.storywarren.com/wp-content/uploads/2016/09/space-1.jpg) | 
+|:--:| 
+| *Space* |
+
+In fraud detection, a reasonable choice is to consider a representation of the transaction that we aim to classify (i.e. the last transaction) as context, in order to select the correct elements from the previous transactions. As representation, it's possible to use a projection of the last transaction.
+
+
+
+
+
 
 
