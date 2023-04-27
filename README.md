@@ -33,10 +33,11 @@ After model selection with grid search to identify the optimal hyper-parameters,
 
 The TPR for low FPR values is what matters most in a fraud detection problem, since the number of cards detected as fraudulent that can be manually checked by fraud investigators is in practice very limited. While PR curves are useful to highlight the performances of fraud detection systems for low FPR values, they however remain difficult to interpret from an operational point of view and Precision Top- K metrics address this issue.
 
-The following graphs focuses only on the best ML classifier, namely XGBoost.
+The following graphs focus only on the best ML classifier, namely XGBoost.
 
 <p align="center">
-  <img src="https://github.com/silviapoletti/fraud-detection/blob/3ff7d7657366f7e74883797b6b5b50c8025ff3cb/visualizations/feat_importance_xgboost.png" width="80%">
+  <img src="https://github.com/silviapoletti/fraud-detection/blob/7a6e48f7ba70bdb81276c7284f2e1c7a077d4e28/visualizations/topk_random.png" width="45%">
+  <img src="https://github.com/silviapoletti/fraud-detection/blob/7a6e48f7ba70bdb81276c7284f2e1c7a077d4e28/visualizations/topk_xgboost.png" width="45%">
 </p>
 
 According to XGBoost, the features that influence more the fraud event are:
