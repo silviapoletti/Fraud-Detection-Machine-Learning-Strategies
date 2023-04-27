@@ -47,6 +47,9 @@ According to XGBoost, the features that better identify the fraud event are:
 * low number of transactions in a terminal in the 30 days window, but high terminal risk in the 7 days windows.
 
 <p align="center">
-  <img src="https://github.com/silviapoletti/fraud-detection/blob/3ff7d7657366f7e74883797b6b5b50c8025ff3cb/visualizations/feat_importance_xgboost.png" width="80%">
+  <img src="https://github.com/silviapoletti/fraud-detection/blob/3ff7d7657366f7e74883797b6b5b50c8025ff3cb/visualizations/feat_importance_xgboost.png">
 </p>
+
+#  Imbalanced learning strategies
+
 
