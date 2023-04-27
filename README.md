@@ -52,4 +52,13 @@ According to XGBoost, the features that better identify the fraud event are:
 
 #  Imbalanced learning strategies
 
+<img align="right" width="40%" src="https://github.com/silviapoletti/fraud-detection/blob/7de14175a7f4dcb891903fe5c29fc282f100011d/visualizations/imbalanced_learning.png">
+
+Various imbalanced learning strategies have been combined with the XGBoost model:
+* Balanced XGBoost is a cost-sensitive learning algorithm in which the misclassification costs is a hyperparameter to be identified through model selection;
+* SMOTE oversampling consists in artificially increasing the proportion of samples from the minority class;
+* Random undersampling and Edited Nearest Neighbors undersampling consist in reducing the imbalance ratio by removing samples from the majority class (well-suited for large datasets);
+* Hybrid resampling combines oversampling the minority class and undersampling the majority class.
+
+
 
