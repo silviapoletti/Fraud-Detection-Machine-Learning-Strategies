@@ -99,6 +99,9 @@ Finally, the autoencoder can be used in a **semi-supervised learning** setting i
 
 Context-aware fraud detection is based on feature aggregation in order to consider the context (e.g. the cardholder history) associated with a transaction to make predictions. The context is established based on a landmark variable, which here can be the Customer ID. Concretely, one starts by building the sequence (usually of fixed-size) of historical transactions, chronologically ordered from the oldest to the current one, that have the same Customer ID as the current transaction.
 
+
+<img align="right" width="50%" src="https://github.com/silviapoletti/fraud-detection/blob/d10b60a6a57ccb8899a3370a660a3c61da28ba04/visualizations/sequential_performance.png">
+
 There are two main sequential learning approaches to deal with sequential dependency between data points:
 * Sliding window methods, which often tend to ignore the order between data points within the window (e.g. **1D convolutional neural networks**);
 * Sequential models that are designed explicitly to consider the sequential order between consecutive data points (e.g. recurrent neural networks such as **Long Short-Term Memory networks** which make use of several gates, i.e. neurons with sigmoid activations, to cleverly select the right information to keep from the previous state and the right information to integrate from the current input).
@@ -113,11 +116,6 @@ In addition, the **Attention module** takes in input all the hidden states of th
 </p>
 
 In fraud detection, a reasonable choice is to consider a representation of the transaction that we aim to classify (i.e. the last transaction) as context, in order to select the correct elements from the previous transactions. As representation, it's possible to use a projection of the last transaction.
-
-
-<p align="center">
-    <img src="https://github.com/silviapoletti/fraud-detection/blob/d10b60a6a57ccb8899a3370a660a3c61da28ba04/visualizations/sequential_performance.png" width="40%">
-</p>
 
 
 
