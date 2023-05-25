@@ -44,11 +44,13 @@ The following graphs focus only on the best ML classifier, namely XGBoost.
   <img src="https://github.com/silviapoletti/fraud-detection/blob/7a6e48f7ba70bdb81276c7284f2e1c7a077d4e28/visualizations/topk_xgboost.png" height=150>
 </p>
 
+The test set includes data dated one week after the last transaction of the training set (delay period). This accounts for the fact that, in a real-world fraud detection system, the label of a transaction (fraudulent or genuine) is only known after a customer complaint, or thanks to the result of a fraud investigation.
+
 According to XGBoost, the features that better identify the fraud event are:
-* low value of the average amount of money spent by the costumer in the 30 days window, but high values for the corresponding features in the 1 and 7 days windows;
+* value of the average amount of money spent by the costumer that is low in the 30 days window but high in the 1 and 7 days windows;
 * high transiction amount;
-* high number of customer's transactions in the 30 days window, but low number for the corresponding feature in the 7 days windows;
-* low number of transactions in a terminal in the 30 days window, but high terminal risk in the 7 days windows.
+* number of customer's transactions that is high in the 30 days window but low in the 7 days windows;
+* low number of transactions in a terminal in the 30 days window but high terminal risk in the 7 days windows.
 
 <p align="center">
   <img src="https://github.com/silviapoletti/fraud-detection/blob/3ff7d7657366f7e74883797b6b5b50c8025ff3cb/visualizations/feat_importance_xgboost.png">
