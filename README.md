@@ -80,7 +80,7 @@ On the contrary, in iterative-based ensemble methods such as XGBoost the baselin
 
 A **feed-forward NN** with one hidden layer and Dropout has been compared to a similar architecture using **embedding layers**, which consider extra categorical inputs, namely the raw terminal id and the day of the week. Indeed, embedding layers learn a representation of each modality of the categorical variable in a continuous vector space of dimension $k$, chosen by the user. Note that learning an embedding of dimension $k$ for a categorical feature is computationally equivalent to learning a classical fully connected layer that takes as input the one-hot encoding of the feature and outputs $k$ neurons.
 
-The following graphs show how the performance metric changes according to the NN hyper-parameter values (for each parameter under consideration, the other parameters are fixed to epochs=20, batch_size=64, dropout=0.2).
+The following graphs show how the performance metric changes according to some hyper-parameter values (for each parameter under consideration, the other parameters are fixed to epochs=20, batch_size=64, dropout=0.2).
 <p align="center">
   <img src="https://github.com/silviapoletti/fraud-detection/blob/2ed92729a56c09a2c28edb7a15bf00e51eecfa6c/visualizations/NN_epochs.png" width="80%">
   <img src="https://github.com/silviapoletti/fraud-detection/blob/2ed92729a56c09a2c28edb7a15bf00e51eecfa6c/visualizations/NN_batches.png" width="80%">
