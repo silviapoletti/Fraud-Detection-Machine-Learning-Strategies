@@ -6,7 +6,7 @@
 
 <img align="right" width="20%" src="https://prop.idcheck.tech/assets/img/fraud-detection.png">
 
-This repository aims to summarize the most convinient Machine Learning and Deep Learning approaches to carry out fraud detection. The code is based on and highlights the main takeaways of the [Fraud Detection Handbook](https://fraud-detection-handbook.github.io/fraud-detection-handbook/Foreword.html) by Le Borgne et al.
+This repository aims to summarize the most convinient Machine Learning and Deep Learning approaches to carry out fraud detection. The code is heavily based on and highlights the main takeaways of the [Fraud Detection Handbook](https://fraud-detection-handbook.github.io/fraud-detection-handbook/Foreword.html) by Le Borgne et al.
 
 Machine Learning for credit card fraud detection has become an active research field, mainly aiming to address the following challenges:
 * the amount of transaction data to be analyzed is usually huge;
